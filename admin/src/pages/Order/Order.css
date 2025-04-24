@@ -1,0 +1,84 @@
+.order-item {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+  align-items: start;
+  gap: 30px;
+  border: 1px solid tomato;
+  padding: 20px;
+  margin: 30px 0px;
+  font-size: 14px;
+  color: #3a3a3a;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.order-item-food,
+.order-item-name {
+  font-weight: 700;
+  color: #2f353b;
+}
+
+.order-item-name {
+  margin-top: 25px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.order-item-address {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.order-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.order-item select {
+  background-color: #ffe8e4;
+  border: 1px solid tomato;
+  border-radius: 8px;
+  width: max(10vw, 120px);
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.order-item select:hover {
+  background-color: #ffd3cb;
+}
+
+.order-item select:focus {
+  border-color: #ff6347;
+  box-shadow: 0 0 5px rgba(255, 99, 71, 0.7);
+}
+
+@media (max-width: 1000px) {
+  .order-item {
+    font-size: 12px;
+    grid-template-columns: 0.5fr 2fr 1fr;
+    padding: 15px 10px;
+  }
+
+  .order-item select {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .order-item img {
+    width: 45px;
+    height: 45px;
+  }
+}
